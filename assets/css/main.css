@@ -1956,23 +1956,28 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
-			position: relative;
-		}
+	header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		position: relative;
+	}
 
-			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
-				background: #dddddd;
-				content: '';
-				display: block;
-				height: 2px;
-				margin: 0.75em auto 0 auto;
-				position: relative;
-				width: 4em;
-			}
+	header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
+		background: #dddddd;
+		content: '';
+		display: block;
+		height: 2px;
+		margin: 0.75em auto 0 auto;
+		position: relative;
+		width: 4em;
+	}
 
-		header.major p {
-			margin-top: 0;
-		}
+
+header.major h1:after {
+  display: none;
+}
+
+	header.major p {
+		margin-top: 0;
+	}
 
 /* Form */
 
@@ -2343,18 +2348,20 @@ input, select, textarea {
 			display: block;
 			float: left;
 			padding: 3em 0;
-			width: 50%;
+			width: 33.3333%; /* 3 columns */
 		}
 
 			ul.icons-grid li h3 {
 				margin: 0;
 			}
 
-			ul.icons-grid li:nth-child(2n + 1) {
-				box-shadow: inset -1px 0 0 0 #dddddd, 1px 0 0 0 #dddddd;
+			ul.icons-grid li:nth-child(3n + 1),
+			ul.icons-grid li:nth-child(3n + 2) {
+  				box-shadow: inset -1px 0 0 0 #dddddd, 1px 0 0 0 #dddddd;
 			}
 
-			ul.icons-grid li:nth-child(2n + 3):before {
+
+			ul.icons-grid li:nth-child(n + 4):before {
 				background: #dddddd;
 				content: '';
 				display: block;
@@ -2363,6 +2370,7 @@ input, select, textarea {
 				position: absolute;
 				width: 100%;
 			}
+
 
 		ul.icons-grid:after {
 			clear: both;
