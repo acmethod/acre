@@ -22,44 +22,17 @@
 			gtag('config', 'AW-17595609915');
 		</script>
 
-
-		<!-- Event snippet for Click to call conversion page
-		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<!-- Lead Form Submission Conversion -->
 		<script>
-			function gtag_report_conversion(url) {
-			var callback = function () {
-				if (typeof(url) != 'undefined') {
-				window.location = url;
-				}
-			};
+		function reportLeadConversion() {
 			gtag('event', 'conversion', {
-				'send_to': 'AW-17595609915/G6UrCIqPqIAcELvmnsZB',
-				'value': 1.0,
-				'currency': 'CAD',
-				'event_callback': callback
+			'send_to': 'AW-17595609915/5e04COS_qIAcELvmnsZB',
+			'value': 1.0,
+			'currency': 'CAD'
 			});
-			return false;
-			}
-		</script>
+		}
 
-		<!-- Event snippet for Submit lead form (1) conversion page
-		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-		<script>
-			function gtag_report_conversion(url) {
-			var callback = function () {
-				if (typeof(url) != 'undefined') {
-				window.location = url;
-				}
-			};
-			gtag('event', 'conversion', {
-				'send_to': 'AW-17595609915/5e04COS_qIAcELvmnsZB',
-				'value': 1.0,
-				'currency': 'CAD',
-				'event_callback': callback
-			});
-			return false;
-			}
-		</script>
+</script>
 
 	</head>
 	<body class="is-preload">
@@ -466,7 +439,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<header class="major">
 						<h2>Get in touch</h2>
 					</header>
-					<form method="post" action="https://formspree.io/f/xvolgagz">
+					<form method="post" action="https://formspree.io/f/xvolgagz" onsubmit="reportLeadConversion()">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
