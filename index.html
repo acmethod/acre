@@ -32,8 +32,7 @@
 			});
 		}
 
-</script>
-
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -183,6 +182,54 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+				// Wait for CloudCMA widget to render
+				const interval = setInterval(() => {
+					// Look for ANY clickable element inside the widget shadow DOM
+					const widgetRoot = document.querySelector('#cloudcma_api_widget_script')?.nextElementSibling;
+
+					if (!widgetRoot) return;
+
+					// Try to access shadow DOM
+					const shadow = widgetRoot.shadowRoot;
+					if (!shadow) return;
+
+					// Find the button inside the shadow DOM
+					const btn = shadow.querySelector('button, a, input[type="submit"]');
+					if (!btn) return;
+
+					// Apply your Begin button styling
+					btn.style.backgroundColor = "#8cd1a8";
+					btn.style.color = "#ffffff";
+					btn.style.border = "0";
+					btn.style.borderRadius = "4px";
+					btn.style.padding = "0 2.25em";
+					btn.style.height = "3.15em";
+					btn.style.lineHeight = "3.15em";
+					btn.style.fontSize = "0.9em";
+					btn.style.fontWeight = "700";
+					btn.style.textTransform = "uppercase";
+					btn.style.letterSpacing = "0.25em";
+					btn.style.cursor = "pointer";
+					btn.style.transition = "background-color 0.2s ease, box-shadow 0.2s ease";
+
+					// Hover effect
+					btn.addEventListener("mouseover", () => {
+						btn.style.backgroundColor = "#6fbf92";
+						btn.style.boxShadow = "0 0 0 2px rgba(255,255,255,0.25) inset";
+					});
+
+					btn.addEventListener("mouseout", () => {
+						btn.style.backgroundColor = "#8cd1a8";
+						btn.style.boxShadow = "none";
+					});
+
+					clearInterval(interval);
+					}, 300);
+				});
+			</script>
+
 
 	</body>
 </html>
