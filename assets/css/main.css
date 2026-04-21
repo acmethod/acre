@@ -3145,7 +3145,7 @@ header.major h1:after {
 
 		/*cma-widget*/		
 			.cma-widget * {
-    			outline: 1px solid red !important;
+    			outline: 10px solid red !important;
 			}
 
 
