@@ -3144,7 +3144,40 @@ header.major h1:after {
 				}
 
 		/*cma-widget*/		
-		
+		/* Make CloudCMA widget button match the HTML5UP 'Begin' button */
+		#cma .cma-widget button,
+		.cma-widget button,
+		.cloudcma button,
+		.cloudcma-api-widget button,
+		#cloudcma_api_widget_script + div button {
+			background-color: #8cd1a8 !important;
+			color: #ffffff !important;
+			border: 0 !important;
+			border-radius: 4px !important;
+			padding: 0 2.25em !important;
+			height: 3.15em !important;
+			line-height: 3.15em !important;
+			font-size: 0.9em !important;
+			font-weight: 700 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 0.25em !important;
+			display: inline-block !important;
+			text-align: center !important;
+			cursor: pointer !important;
+			transition: background-color 0.2s ease, box-shadow 0.2s ease !important;
+			box-shadow: none !important;
+		}
+
+		/* Hover effect identical to your Begin button */
+		#cma .cma-widget button:hover,
+		.cma-widget button:hover,
+		.cloudcma button:hover,
+		.cloudcma-api-widget button:hover,
+		#cloudcma_api_widget_script + div button:hover {
+			background-color: #6fbf92 !important;
+			box-shadow: 0 0 0 2px rgba(255,255,255,0.25) inset !important;
+		}
+
 
 		/* Footer */
 
